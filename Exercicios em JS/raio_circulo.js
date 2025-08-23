@@ -4,8 +4,8 @@ const pi = 3.14159;
 // Raio do círculo
 let raio = 55;
 
-// Calculo da área do círculo
+// Calculo da área
 let area = pi * raio * raio;
 
-// Exibe o resultado no console
+// Exibe no console
 console.log("Raio " + raio + " Área do Circulo: " + area);
