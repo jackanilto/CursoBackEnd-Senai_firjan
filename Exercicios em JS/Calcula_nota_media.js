@@ -7,7 +7,7 @@ let nota3 = 90;
 let media = (nota1 + nota2 + nota3) / 3;
 
 // Exibir média
-console.log("A média do aluno é: " + media); // .toFixed(2) limita a 2 casas decimais
+console.log("A média do aluno é: " + media); // .toFixed(2) Para limitar a 2 casas decimais
 
 // Verifica se aprovado ou reprovado
 if (media >= 7) {
