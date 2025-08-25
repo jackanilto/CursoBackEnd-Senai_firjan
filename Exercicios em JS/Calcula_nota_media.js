@@ -9,7 +9,7 @@ let media = (nota1 + nota2 + nota3) / 3;
 // Exibir média
 console.log("A média do aluno é: " + media); // .toFixed(2) Para limitar a 2 casas decimais
 
-// Verifica se aprovado ou reprovado
+// Verifica se aprovado / reprovado
 if (media >= 7) {
   console.log("Aluno APROVADO!");
 } else {
