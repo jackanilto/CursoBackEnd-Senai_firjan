@@ -1,4 +1,3 @@
-
 // programa
 // {
 //     funcao inicio()
@@ -28,20 +27,27 @@
 //         }
 //     }
 // }
-// Notas
+
+// Notas do aluno
 let nota1 = 80;
 let nota2 = 50;
 let nota3 = 90;
 
-// Calculo da média do aluno
+// Frequência do aluno (em %)
+let frequencia = 70;
+
+// Cálculo da média
 let media = (nota1 + nota2 + nota3) / 3;
 
-// Exibir média
-console.log("A média do aluno é: " + media); // .toFixed(2) Para limitar a 2 casas decimais
+// Exibir resultados
+console.log("Média do aluno: " + media.toFixed(2));
+console.log("Frequência: " + frequencia + "%");
 
-// Verifica se aprovado / reprovado
-if (media >= 7) {
-  console.log("Aluno APROVADO!");
+// Verificar situação
+if (media >= 7 && frequencia >= 75) {
+  console.log("✅ Aluno APROVADO!");
+} else if (media >= 5 || frequencia < 75) {
+  console.log("⚠️ Aluno em RECUPERAÇÃO!");
 } else {
-  console.log("Aluno REPROVADO!");
+  console.log("❌ Aluno REPROVADO!");
 }
