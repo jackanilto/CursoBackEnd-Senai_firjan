@@ -77,7 +77,7 @@ filmes.forEach(filme => console.log('Eu gosto do filme', filme))
 
 console.clear()
 
-
+// Exercicio 1 ================================================
 
 let precos = [30, 135, 140, 10.50, 89, 190]
 
@@ -94,9 +94,8 @@ console.log('Preços Normais:', precos)
 console.log('Preços com desconto:', precosComDesconto)
 
 
-//========================================================
+// Exercicio 2 ================================================
 
-console.clear()
 
 var preco = [30, 150, 10.50]
 var newPrecos = precos.map(function(preco) {
@@ -107,3 +106,23 @@ var newPrecos = precos.map(function(preco) {
     }
 })
 console.log('Novos Preços:', newPrecos)
+
+
+// Array de Objetos - acessando obj dentro do obj ================================================
+
+const arrayObj = [
+    { name: 'João', idade: 15},
+    { name: 'Leo', idade: 50},
+    { name:'Luzimar', idade: 40}
+]
+
+console.log(arrayObj[0].idade)
+console.clear()
+
+arrayObj.forEach(function(obj) {
+    if (obj.idade >= 18) {
+        console.log(`${obj.name} pode dirigir`)
+    } else {
+        console.log(`${obj.name} não pode dirigir`)
+    }
+})
