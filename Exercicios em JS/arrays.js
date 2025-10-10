@@ -117,7 +117,11 @@ const arrayObj = [
 ]
 
 console.log(arrayObj[0].idade)
-console.clear()
+
+
+
+
+//===========================================================
 
 arrayObj.forEach(function(obj) {
     if (obj.idade >= 18) {
@@ -126,3 +130,71 @@ arrayObj.forEach(function(obj) {
         console.log(`${obj.name} não pode dirigir`)
     }
 })
+// Usando filter  para retornar uma lista  com Arrow Function e sem Arrow Function
+const alunosMaioresDeIdadeSemArrow = arrayObj.filter(function(obj){
+    return obj.idade > 18
+})
+
+const alunosMaioresDeIdadeComArrow = arrayObj.filter(obj => obj.idade <18)
+
+
+// Lista podem ter tipos diferentes
+
+var typesArray = [true, 2, 3, 14, 'PI']
+
+var fruits = ['maçã', 'mamão', 'orange', 'laranja']
+// Pega o primeiro elemento da lista 
+console.log(fruits[0])
+// Pega o ultimo elemento da lista 
+console.log(fruits[fruits.length -1])
+
+console.log(fruits[fruits.length])
+
+
+
+
+
+// SORT
+console.log(fruits)
+console.log(fruits.sort())
+
+
+
+console.log(fruits)
+fruits.push('grape', 'orange')
+
+
+
+console.log(Math.random() * 10)
+
+//Shift
+
+console.log(fruits)
+console.log(fruits.pop())
+console.log(fruits.shift())
+console.log(fruits.shift())
+console.log(fruits.shift())
+console.log(fruits.shift())
+console.log(fruits.unshift('limao','morango'))
+console.log(fruits)
+
+
+
+//verificar se existe um elemento
+console.log(fruits.includes('limão'))
+
+console.clear()
+var alunos = ['Antonio', 'João', 'Antonio']
+if (alunos.includes('Sebastião')){
+
+}
+
+console.log(alunos.includes('Sebastião'))
+var novoAluno = 'Ana'
+if (novoAluno.includes(novoAluno)){
+    console.log('Este Aluno já existe')
+}else{
+    novoAluno.push(novoAluno)
+    console.log('Aluno adiconado com sucesso')
+}
+console.log(alunos)
