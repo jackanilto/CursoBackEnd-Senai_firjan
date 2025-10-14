@@ -183,14 +183,13 @@ console.log(fruits)
 //verificar se existe um elemento
 console.log(fruits.includes('limão'))
 
-console.clear()
 var alunos = ['Antonio', 'João', 'Antonio']
 if (alunos.includes('Sebastião')){
-
+    
 }
 
 console.log(alunos.includes('Sebastião'))
-var novoAluno = 'Ana'
+var novoAluno = 'Amario'
 if (novoAluno.includes(novoAluno)){
     console.log('Este Aluno já existe')
 }else{
@@ -198,3 +197,19 @@ if (novoAluno.includes(novoAluno)){
     console.log('Aluno adiconado com sucesso')
 }
 console.log(alunos)
+
+
+console.clear()
+
+// Somar Numeros pares de uma lista
+// Dado um array de número, some os numeros pares
+
+let soma = 0;
+let N = [1, 2, 3, 44, 55, 76, 47, 8, 9];
+
+for (let i = 0; i < N.length; i++) {
+    if (N[i] % 2 == 0) { 
+        soma = soma + N[i]; 
+    }
+}
+console.log(soma);
