@@ -142,7 +142,7 @@ const alunosMaioresDeIdadeComArrow = arrayObj.filter(obj => obj.idade <18)
 
 var typesArray = [true, 2, 3, 14, 'PI']
 
-var fruits = ['maçã', 'mamão', 'orange', 'laranja']
+var fruits = ['maçã', 'mamão', 'orange', 'laranja, limão, abacate']
 // Pega o primeiro elemento da lista 
 console.log(fruits[0])
 // Pega o ultimo elemento da lista 
@@ -199,7 +199,6 @@ if (novoAluno.includes(novoAluno)){
 console.log(alunos)
 
 
-console.clear()
 
 // Somar Numeros pares de uma lista
 // Dado um array de número, some os numeros pares
@@ -213,3 +212,200 @@ for (let i = 0; i < N.length; i++) {
     }
 }
 console.log(soma);
+
+
+
+//Verificar um indice de um elemento
+
+console.log(fruits.indexOf('grape'))
+console.log(fruits[2])
+
+const result = fruits.find((fruit) => fruit === 'grape')
+console.log(result)
+
+
+
+//slice - FATIAR -> array.slice(inicio, final)  
+
+let newFruits = fruits.slice(0, 2)
+let newFruits2 = fruits.slice(3, 6)
+let newFruits3 = fruits.slice(-2)
+
+console.log(fruits)
+
+
+//contar quantos elementos sao maiores que 20
+//Use um loop e condição para contar quantos numeros sao maiores que 20
+
+// let Numeros = [1, 2, 3, 44, 55, 76, 47, 8, 9];
+
+// for (let i = 0; i < 20; i++) {
+    //     if (Numeros) { 
+        //         soma = soma + N[i]; 
+        //     }
+        // }
+        // console.log(Numeros);
+        let Numeros = [1, 2, 3, 44, 55, 76, 47, 8, 9];
+        let contar = 0;
+        
+        for (let i = 0; i < Numeros.length; i++) {
+            if (Numeros[i] > 20) {
+                contar++;
+            }
+        }
+        
+        console.log( contar, "São maiores que 20");
+        
+        
+        /*
+        Filtrar pessoas maiores de idade 
+        Crie uma função que recebe uma lista de objetos PESSOA  
+        com nome e idade , e retorna apenas 
+        */
+       
+       
+       
+       
+       let listaDePessoas = [
+           { nome: "Joana", idade: 13 },
+           { nome: "Joaquin", idade: 22 },
+           { nome: "João", idade: 28 },
+           { nome: "Jonas", idade: 14 }
+        ];
+        
+        function filtrarMaioresDeIdade(pessoas) {
+            return pessoas.filter(pessoa => pessoa.idade >= 18);
+        }
+        let resultado = filtrarMaioresDeIdade(listaDePessoas);
+        console.log(resultado);
+        
+        
+        
+        let Pessoas = [
+            { nome: "Joana", idade: 17 },
+            { nome: "Joaquin", idade: 26 },
+            { nome: "João", idade: 28 },
+            { nome: "Jonas", idade: 14 }
+        ];
+
+Pessoas.forEach(Pessoas => {
+    if (Pessoas.age >=18) {
+        console.log(user.nome)
+    }
+})
+console.log(Pessoas)
+
+
+/* 
+Dado umaArray de stryngs, retorne um novo array com os nomes em Letras Maiuscula 
+usar .toUpperCse() para string fcar maiuscula
+*/ 
+
+const listaNomes = ["emanuel", "joão", "Joana", "maria" ]
+const newLitaNomes = listaNomes.map( name => name.toUpperCase())
+console.log(newLitaNomes)
+
+
+
+
+// Cria uma lista (array) chamada 'scoreList' com 3 notas
+const scoreList = [9, 5, 3]
+
+// Declara a função 'checkScore' que recebe uma lista de números como parâmetro
+function checkScore(list){
+    // Cria uma variável 'soma' para armazenar a soma das notas, começando em 0
+    let soma = 0
+    
+    // Percorre cada elemento da lista com 'forEach'
+    // Para cada 'score' (nota), soma ao valor atual de 'soma'
+    list.forEach(score => soma = soma + score)
+    
+    // Calcula a média dividindo a soma pelo tamanho da lista
+    // Se a média for maior ou igual a 6, retorna "Aprovado"
+    // Caso contrário, retorna "Reprovado"
+    return (soma / list.length) >= 6 ? 'Aprovado' : 'Reprovado'
+}
+
+// Chama a função 'checkScore' passando 'scoreList' e imprime o resultado no console
+console.log(checkScore(scoreList))
+
+
+/*
+Sistema de cadastro de Alunos
+Descriçao : Crie uam classe Aluno com os atributosNome, Ideade e notas (Lista de Numeros).
+Adicione metodos para :
+Calcular Media 
+Verificar se o aluno está aprovado (media 7)
+
+*/
+
+class Aluno {
+    // O construtor é chamado quando criamos um novo Aluno
+    constructor(nome, idade, notas) {
+        this.nome = nome;  
+        this.idade = idade; 
+        this.notas = notas; 
+    }
+    
+    calcularMedia() {
+        let soma = 0;
+        for (let i = 0; i < this.notas.length; i++) {
+            soma += this.notas[i];
+        }
+        return (soma / this.notas.length).toFixed(2);
+    }
+    verificarAprovacao() {
+        const media = this.calcularMedia();
+        return media >= 7 ? 'Aprovado' : 'Reprovado';
+    }
+}
+const aluno1 = new Aluno('Ana', 17, [8, 9, 7]);
+const aluno2 = new Aluno('Carlos', 18, [5, 6, 6]);
+const aluno3 = new Aluno('Carla', 14, [2, 8, 7]);
+const aluno4 = new Aluno('Gilberto', 14, [2, 8, 7]);
+
+console.log(`Aluno: ${aluno1.nome}`);
+console.log(`Média: ${aluno1.calcularMedia()}`);
+console.log(`Situação: ${aluno1.verificarAprovacao()}`);
+
+console.log('------------------------');
+
+console.log(`Aluno: ${aluno2.nome}`);
+console.log(`Média: ${aluno2.calcularMedia()}`);
+console.log(`Situação: ${aluno2.verificarAprovacao()}`);
+console.log('------------------------');
+
+console.log(`Aluno: ${aluno3.nome}`);
+console.log(`Média: ${aluno3.calcularMedia()}`);
+console.log(`Situação: ${aluno3.verificarAprovacao()}`);
+
+
+console.clear()
+
+
+/*
+crie uma classe  Tarefa com titulo. descrição , hora e data adicionada 
+e status (pendente ou concluida)  faça um programa 
+que permita adicionar tarefas marcar como concluida e listar todas 
+*/
+
+class Tarefas {
+    constructor(titulo, descricao) {
+        this.titulo = titulo;
+        this.descricao = descricao;
+        this.data = new Date();  // parênteses para criar o objeto Date atual
+        this.status = 'Pendente'; 
+    }
+    taskConcluida() {
+        this.status = 'Concluída';
+    }
+}
+
+const newTask = new Tarefas('Estudar JS', 'Estudar Muito');
+console.log(newTask);
+
+console.log('Antes:', newTask);
+
+newTask.taskConcluida();
+
+console.log('Depois:', newTask);
