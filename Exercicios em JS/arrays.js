@@ -266,19 +266,19 @@ console.log(fruits)
        
        
        
-       let listaDePessoas = [
-           { nome: "Joana", idade: 13 },
-           { nome: "Joaquin", idade: 22 },
-           { nome: "João", idade: 28 },
-           { nome: "Jonas", idade: 14 }
-        ];
-        
-        function filtrarMaioresDeIdade(pessoas) {
-            return pessoas.filter(pessoa => pessoa.idade >= 18);
-        }
-        let resultado = filtrarMaioresDeIdade(listaDePessoas);
-        console.log(resultado);
-        
+        let listaDePessoas = [
+            { nome: "Joana", idade: 13 },
+            { nome: "Joaquin", idade: 22 },
+            { nome: "João", idade: 28 },
+            { nome: "Jonas", idade: 14 }
+         ];
+         
+         function filtrarMaioresDeIdade(pessoas) {
+             return pessoas.filter(pessoa => pessoa.idade >= 18);
+         }
+         let resultado = filtrarMaioresDeIdade(listaDePessoas);
+         console.log(resultado);
+         
         
         
         let Pessoas = [
