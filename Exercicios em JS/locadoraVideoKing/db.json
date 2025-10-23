@@ -1,0 +1,50 @@
+{
+    "movies": [
+        {
+            "id": "1",
+            "directorID": "1",
+            "title": " OSenhor dos Aneis",
+            "rating": 5,
+            "duration": 120
+        },
+
+        {
+            "id": "2",
+            "directorID": "2",
+            "title": " OSenhor dos Aneis e as Duas Torres",
+            "rating": 4.9,
+            "duration": 110
+        },
+        {
+            "id": "3",
+            "directorID": "2",
+            "title": " O Senhor dos Aneis o retorno do rei ",
+            "rating": 5,
+            "duration": 120
+        },
+        {
+            "id": "4",
+            "directorID": "1",
+            "title": " As Tartarugas Nija ",
+            "rating": 3.9,
+            "duration": 100
+        },
+        {
+            "id": "5",
+            "directorID": "1",
+            "title": " Guerra nas Estrelas",
+            "rating": 4,
+            "duration": 150
+        }
+    ],
+    "diretors": [
+        {
+            "id":"1",
+            "name": "Peter Jackson"
+        },
+        {
+            "id":"2",
+            "name": "Tarantino"
+        }
+    ]
+}
