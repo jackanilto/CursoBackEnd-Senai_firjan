@@ -51,4 +51,4 @@ async function getMoviesByDirector(directorID) {
     }
   }
   
-  getMoviesByDirector(1);
+  getMoviesByDirector(2);
